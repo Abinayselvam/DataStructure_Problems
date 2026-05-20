@@ -121,5 +121,36 @@ class LinkedList<T> {
 
         return false;
     }
+    // Search node and return node reference
+    public Node<T> searchNode(T key) {
+
+        Node<T> temp = head;
+
+        while (temp != null) {
+
+            if (temp.data.equals(key)) {
+                return temp;
+            }
+
+            temp = temp.next;
+        }
+
+        return null;
+    }
+
+    // Insert after specific node
+    public void insertAfter(Node<T> previousNode, T data) {
+
+        if (previousNode == null) {
+            System.out.println("Previous node cannot be null");
+            return;
+        }
+
+        Node<T> newNode = new Node<>(data);
+
+        newNode.next = previousNode.next;
+
+        previousNode.next = newNode;
+    }
 
 }
