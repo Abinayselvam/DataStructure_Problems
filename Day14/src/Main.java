@@ -4,10 +4,12 @@ public class Main {
         System.out.println("Welcome to the Java Data Structure Problems");
         LinkedList<Integer> list = new LinkedList<>();
 
-        // Create and append
+        // Create initial list
         list.append(56);
-        list.append(30);
         list.append(70);
+
+        // Insert 30 between 56 and 70
+        list.insertAfter(56, 30);
 
         System.out.println("Linked List Sequence:");
 

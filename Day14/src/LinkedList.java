@@ -1,30 +1,52 @@
-public class LinkedList<T> {
+class LinkedList<T> {
 
     Node<T> head;
 
-    // Append at end
+    // Append method
     public void append(T data) {
 
         Node<T> newNode = new Node<>(data);
 
-        // If list empty
         if (head == null) {
             head = newNode;
             return;
         }
 
-        // Traverse till last node
         Node<T> temp = head;
 
         while (temp.next != null) {
             temp = temp.next;
         }
 
-        // Link last node to new node
         temp.next = newNode;
     }
 
-    // Display list
+    // Insert after a specific node
+    public void insertAfter(T previousData, T newData) {
+
+        Node<T> temp = head;
+
+        // Search for previous node
+        while (temp != null && !temp.data.equals(previousData)) {
+            temp = temp.next;
+        }
+
+        // If node not found
+        if (temp == null) {
+            System.out.println("Previous node not found");
+            return;
+        }
+
+        Node<T> newNode = new Node<>(newData);
+
+        // Link new node
+        newNode.next = temp.next;
+
+        // Link previous node
+        temp.next = newNode;
+    }
+
+    // Display linked list
     public void display() {
 
         Node<T> temp = head;
