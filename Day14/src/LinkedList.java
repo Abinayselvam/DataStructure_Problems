@@ -105,5 +105,21 @@ class LinkedList<T> {
         // Remove last node
         temp.next = null;
     }
+    // Search node
+    public boolean search(T key) {
+
+        Node<T> temp = head;
+
+        while (temp != null) {
+
+            if (temp.data.equals(key)) {
+                return true;
+            }
+
+            temp = temp.next;
+        }
+
+        return false;
+    }
 
 }
