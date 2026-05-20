@@ -64,4 +64,17 @@ class LinkedList<T> {
 
         System.out.println();
     }
+    // Pop first element
+    public void pop() {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        System.out.println("Deleted Node: " + head.data);
+
+        // Move head to next node
+        head = head.next;
+    }
 }

@@ -14,5 +14,14 @@ public class Main {
         System.out.println("Linked List Sequence:");
 
         list.display();
+
+        System.out.println("Before Pop:");
+
+        list.display();
+
+        // Delete first element
+        list.pop();
+
+        System.out.println("After Pop:");
     }
 }
