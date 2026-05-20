@@ -34,4 +34,12 @@ public class LinkedList<T> {
       }
       System.out.println();
     }
+
+    //Add first
+    public void addFirst(T data)
+    {
+        Node<T> newNode=new Node<>(data);
+        newNode.next=head;
+        head=newNode;
+    }
 }
