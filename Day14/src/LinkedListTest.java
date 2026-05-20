@@ -36,4 +36,18 @@ class LinkedListTest {
 
         assertEquals(3, list.size());
     }
+    @Test
+    void givenNumbers_WhenAdded_ShouldSortCorrectly() {
+
+        SortedLinkedList<Integer> list =
+                new SortedLinkedList<>();
+
+        list.add(56);
+        list.add(30);
+        list.add(40);
+        list.add(70);
+
+        assertEquals(4, list.size());
+        assertEquals(30, list.head.data);
+    }
 }
