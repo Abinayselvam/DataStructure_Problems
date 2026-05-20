@@ -21,4 +21,19 @@ class LinkedListTest {
 
         assertTrue(result);
     }
+    @Test
+    void givenLinkedList_When40Deleted_SizeShouldBe3() {
+
+        LinkedList<Integer> list =
+                new LinkedList<>();
+
+        list.append(56);
+        list.append(30);
+        list.append(40);
+        list.append(70);
+
+        list.delete(40);
+
+        assertEquals(3, list.size());
+    }
 }
