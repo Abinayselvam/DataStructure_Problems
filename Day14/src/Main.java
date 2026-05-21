@@ -27,7 +27,7 @@ public class Main {
         list.append(70);
 
         // Insert 30 between 56 and 70
-        list.insertAfter(56, 30);
+//        list.insertAfter(56, 30);
 
         System.out.println("Linked List Sequence:");
 
