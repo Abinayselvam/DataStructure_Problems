@@ -21,5 +21,14 @@ public class Main {
                 //        System.out.println("Simple Linked List:");
 
         list.display();
+
+        // Create and append
+        list.append(56);
+        list.append(30);
+        list.append(70);
+
+        System.out.println("Linked List Sequence:");
+
+        list.display();
     }
 }
