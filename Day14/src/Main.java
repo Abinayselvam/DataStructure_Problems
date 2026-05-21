@@ -43,5 +43,9 @@ public class Main {
         list.popLast();
         System.out.println("After popLast:");
         System.out.println("After Pop:");
+        boolean found = list.search(30);
+
+        System.out.println("Is 30 Present? " + found);
+
     }
 }
