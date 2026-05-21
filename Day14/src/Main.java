@@ -53,6 +53,29 @@ public class Main {
         list.insertAfter(node, 40);
 
         System.out.println("After Insertion:");
+        // Delete 40
+        list.delete(40);
+
+        System.out.println("After Deletion:");
+
+        list.display();
+
+        System.out.println("Size of Linked List: "
+                + list.size());
+
+        SortedLinkedList<Integer> list1 =
+                new SortedLinkedList<>();
+
+        list1.add(56);
+        list1.add(30);
+        list1.add(40);
+        list1.add(70);
+
+        System.out.println("Sorted Linked List:");
+
+        list1.display();
+
+        System.out.println("Size: " + list1.size());
 
     }
 }

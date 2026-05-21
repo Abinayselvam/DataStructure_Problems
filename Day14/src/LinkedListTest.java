@@ -21,4 +21,33 @@ class LinkedListTest {
 
         assertTrue(result);
     }
+    @Test
+    void givenLinkedList_When40Deleted_SizeShouldBe3() {
+
+        LinkedList<Integer> list =
+                new LinkedList<>();
+
+        list.append(56);
+        list.append(30);
+        list.append(40);
+        list.append(70);
+
+        list.delete(40);
+
+        assertEquals(3, list.size());
+    }
+    @Test
+    void givenNumbers_WhenAdded_ShouldSortCorrectly() {
+
+        SortedLinkedList<Integer> list =
+                new SortedLinkedList<>();
+
+        list.add(56);
+        list.add(30);
+        list.add(40);
+        list.add(70);
+
+        assertEquals(4, list.size());
+        assertEquals(30, list.head.data);
+    }
 }

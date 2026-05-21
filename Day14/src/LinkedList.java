@@ -155,5 +155,53 @@ public class LinkedList<T> {
 
         previousNode.next = newNode;
     }
+    // Delete node by key
+    public void delete(T key) {
+
+        if (head == null) {
+            return;
+        }
+
+        // If head itself is target
+        if (head.data.equals(key)) {
+            head = head.next;
+            return;
+        }
+
+        Node<T> temp = head;
+
+        // Find previous node
+        while (temp.next != null &&
+                !temp.next.data.equals(key)) {
+
+            temp = temp.next;
+        }
+
+        // Key not found
+        if (temp.next == null) {
+            System.out.println("Node not found");
+            return;
+        }
+
+        // Delete node
+        temp.next = temp.next.next;
+    }
+
+    // Size method
+    public int size() {
+
+        int count = 0;
+
+        Node<T> temp = head;
+
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+
+        return count;
+    }
+
+
 
 }
