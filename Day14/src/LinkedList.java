@@ -1,5 +1,6 @@
 public class LinkedList<T> {
-  Node<T> head;
+
+    Node<T> head;
 
 //Add Node at end
   public void add(T data)
@@ -39,21 +40,24 @@ public class LinkedList<T> {
         // Link last node to new node
         temp.next = newNode;
     }
-    //Display
-    public void display()
-    {
-      Node<T> temp = head;
 
-      while (temp != null) {
-        System.out.print(temp.data);
+    // Display list
+    public void display() {
 
-        if (temp.next != null) {
-          System.out.print(" -> ");
+        Node<T> temp = head;
+
+        while (temp != null) {
+
+            System.out.print(temp.data);
+
+            if (temp.next != null) {
+                System.out.print(" -> ");
+            }
+
+            temp = temp.next;
         }
 
-        temp = temp.next;
-      }
-      System.out.println();
+        System.out.println();
     }
 
     //Add first
