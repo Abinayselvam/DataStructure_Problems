@@ -44,8 +44,15 @@ public class Main {
         System.out.println("After popLast:");
         System.out.println("After Pop:");
         boolean found = list.search(30);
+        // Search node with value 30
+        Node<Integer> node = list.searchNode(30);
+
 
         System.out.println("Is 30 Present? " + found);
+        // Insert 40 after 30
+        list.insertAfter(node, 40);
+
+        System.out.println("After Insertion:");
 
     }
 }
