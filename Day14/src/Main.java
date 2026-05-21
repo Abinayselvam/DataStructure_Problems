@@ -32,5 +32,16 @@ public class Main {
         System.out.println("Linked List Sequence:");
 
         list.display();
+
+        System.out.println("Before Pop:");
+
+        list.display();
+
+        // Delete first element
+        list.pop();
+        // Delete last node
+        list.popLast();
+        System.out.println("After popLast:");
+        System.out.println("After Pop:");
     }
 }

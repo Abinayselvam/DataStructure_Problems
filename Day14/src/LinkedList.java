@@ -67,4 +67,46 @@ public class LinkedList<T> {
         newNode.next=head;
         head=newNode;
     }
+    // Pop first element
+    public void pop() {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        System.out.println("Deleted Node: " + head.data);
+
+        // Move head to next node
+        head = head.next;
+    }
+
+    // Delete last node
+    public void popLast() {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        // Only one node
+        if (head.next == null) {
+            System.out.println("Deleted Node: " + head.data);
+            head = null;
+            return;
+        }
+
+        Node<T> temp = head;
+
+        // Move till second last node
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+
+        System.out.println("Deleted Node: " + temp.next.data);
+
+        // Remove last node
+        temp.next = null;
+    }
+
 }
